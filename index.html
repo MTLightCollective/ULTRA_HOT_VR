@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>A-Frame Sample</title>
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+        <script src="https://kripken.github.io/ammo.js/builds/ammo.wasm.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.js"></script>
+    </head>
+    <body>
+        <a-scene obb-collider="showColliders: true" physics=" driver: ammo; debug: true; debugDrawMode: 1;">
+            <a-entity id="player">
+                
+            <a-entity
+                id="leftHand"
+                hand-tracking-grab-controls="hand: left; hoverEnabled:true"
+
+            ></a-entity>
+            <a-entity
+                id="rightHand"
+                hand-tracking-grab-controls="hand: right; hoverEnabled:true"
+            ></a-entity>
+            </a-entity>
+           <a-entity id="world">
+            <a-box></a-box>
+           </a-entity>
+        </a-scene>
+    </body>
+</html>

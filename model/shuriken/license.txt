@@ -1,0 +1,11 @@
+Model Information:
+* title:	Shuriken
+* source:	https://sketchfab.com/3d-models/shuriken-296419045a144b1c8c4762d7804acd4f
+* author:	Lightningx (https://sketchfab.com/Lightningx)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Shuriken" (https://sketchfab.com/3d-models/shuriken-296419045a144b1c8c4762d7804acd4f) by Lightningx (https://sketchfab.com/Lightningx) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
