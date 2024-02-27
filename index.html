@@ -6,24 +6,36 @@
         <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
         <script src="https://kripken.github.io/ammo.js/builds/ammo.wasm.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
     </head>
     <body>
-        <a-scene obb-collider="showColliders: true" physics=" driver: ammo; debug: true; debugDrawMode: 1;">
+        <a-scene
+            obb-collider="showColliders: false"
+            physics=" driver: ammo; debug: true; debugDrawMode: 1;"
+        >
             <a-entity id="player">
-                
-            <a-entity
-                id="leftHand"
-                hand-tracking-grab-controls="hand: left; hoverEnabled:true"
-
-            ></a-entity>
-            <a-entity
-                id="rightHand"
-                hand-tracking-grab-controls="hand: right; hoverEnabled:true"
-            ></a-entity>
+                <a-entity
+                    id="leftHand"
+                    hand-tracking-grab-controls="hand: left; hoverEnabled:true"
+                ></a-entity>
+                <a-entity
+                    id="rightHand"
+                    hand-tracking-grab-controls="hand: right; hoverEnabled:true"
+                ></a-entity>
             </a-entity>
-           <a-entity id="world">
-            <a-box></a-box>
-           </a-entity>
+            <a-entity id="world">
+                <a-entity
+                    id="shuriken"
+                    gltf-model="model\shuriken\scene.gltf"
+                    scale="0.2 0.2 0.2"
+                    position="0 1.65782 -1.31097"
+                    rotation="68.09775282468374 0 0"
+                ></a-entity>
+                <a-entity id="environment" environment="preset:forest"></a-entity>
+            </a-entity>
         </a-scene>
+        <script>
+            console.log("coucou");
+        </script>
     </body>
 </html>

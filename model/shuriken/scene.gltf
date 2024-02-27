@@ -91,15 +91,15 @@
   "buffers": [
     {
       "byteLength": 27200,
-      "uri": "scene.bin"
+      "uri": "model/shuriken/scene.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/lambert1_baseColor.png"
+      "uri": "model/shuriken/textures/lambert1_baseColor.png"
     },
     {
-      "uri": "textures/lambert1_metallicRoughness.png"
+      "uri": "model/shuriken/textures/lambert1_metallicRoughness.png"
     }
   ],
   "materials": [
