@@ -4,23 +4,30 @@
         <title>A-Frame Sample</title>
         <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
-        <script src="https://kripken.github.io/ammo.js/builds/ammo.wasm.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/MozillaReality/ammo.js@8bbc0ea/builds/ammo.wasm.js"></script>
+        <script src="./vendor/aframe-physics-system.js"></script>
+        <script src="scripts/grab.js"></script>
         <script src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
     </head>
     <body>
         <a-scene
             obb-collider="showColliders: false"
-            physics=" driver: ammo; debug: true; debugDrawMode: 1;"
+            physics=" driver: ammo; debug:true"
         >
             <a-entity id="player">
                 <a-entity
                     id="leftHand"
-                    hand-tracking-grab-controls="hand: left; hoverEnabled:true"
+                    hand-tracking-controls="hand: left"
+                    ammo-body="type: kinematic; emitCollisionEvents: true" 
+                    ammo-shape="type: sphere; fit: manual; sphereRadius: 0.2;"
+                    grab
                 ></a-entity>
                 <a-entity
                     id="rightHand"
-                    hand-tracking-grab-controls="hand: right; hoverEnabled:true"
+                    hand-tracking-controls="hand: right"
+                    ammo-body="type: kinematic; emitCollisionEvents: true" 
+                    ammo-shape="type: sphere; fit: manual; sphereRadius: 0.2;"
+                    grab
                 ></a-entity>
             </a-entity>
             <a-entity id="world">
@@ -30,8 +37,11 @@
                     scale="0.2 0.2 0.2"
                     position="0 1.65782 -1.31097"
                     rotation="68.09775282468374 0 0"
+                    ammo-body="type: dynamic" ammo-shape="type: box"
                 ></a-entity>
+                <a-box width="75" height="0.1" depth="75" ammo-body="type: static; mass:1" ammo-shape="type:box;fit:all" visible="false"></a-box>
                 <a-entity id="environment" environment="preset:forest"></a-entity>
+
             </a-entity>
         </a-scene>
         <script>
